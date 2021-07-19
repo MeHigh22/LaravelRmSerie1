@@ -28,3 +28,9 @@ Route::get('/{variable}', function ($variable) {
     }
     return view('welcome', compact('variable'));
 });
+
+
+Route::get("/{n1}/{n2}", function ($n1, $n2) {
+    return view("addsubs", compact("n1", "n2"));
+});
+
