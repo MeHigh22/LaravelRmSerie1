@@ -19,18 +19,22 @@ Route::get('/Mihai', function () {
 });
 
 
-Route::get('/{variable}', function ($variable) {
-    if(is_numeric($variable)) {
-        $multiply = 4 * $variable;
-        return "4" . "*" . $variable . "=" . $multiply;
-    } elseif(!is_numeric($variable)) {
-        return "Pas possible Monsieur";
-    }
-    return view('welcome', compact('variable'));
-});
+// Route::get('/{variable}', function ($variable) {
+//     if(is_numeric($variable)) {
+//         $multiply = 4 * $variable;
+//         return "4" . "*" . $variable . "=" . $multiply;
+//     } elseif(!is_numeric($variable)) {
+//         return "Pas possible Monsieur";
+//     }
+//     return view('welcome', compact('variable'));
+// });
 
 
-Route::get("/{n1}/{n2}", function ($n1, $n2) {
-    return view("addsubs", compact("n1", "n2"));
+// Route::get("/{n1}/{n2}", function ($n1, $n2) {
+//     return view("addsubs", compact("n1", "n2"));
+// });
+
+Route::get("/couleurs/{couleur}", function ($couleur){
+    return view ("couleurs", compact('couleur'));
 });
 
